@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,11 +16,15 @@ MatButtonModule,
 MatToolbarModule,
 MatExpansionModule
 } from '@angular/material';
+import { ReadComponent } from './read/read.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,8 @@ MatExpansionModule
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
 
   ],
   providers: [],

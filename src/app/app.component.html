@@ -6,7 +6,22 @@
   </li>
 </ul>> -->
 
-<mat-accordion *ngFor="let movies of MyMovies">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+    <span class="title-center">
+    My single page application
+    </span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+    <button mat-button [routerLink]="['/create']" color="Warn">Create</button>
+    <button mat-button [routerLink]="['/read']">Read</button>
+    </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    
+    
+ 
+<!--<mat-accordion *ngFor="let movies of MyMovies">
   <mat-expansion-panel [expanded]="true" >
   <mat-expansion-panel-header>
   <mat-panel-title>
@@ -23,6 +38,7 @@
   </mat-action-row>
   </mat-expansion-panel>
   </mat-accordion>
+-->
 
 
 <router-outlet></router-outlet>
